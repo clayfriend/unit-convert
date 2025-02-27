@@ -1,11 +1,18 @@
 let inputNum=document.getElementById("input-num")
 const convertBtn=document.getElementById("convert-btn")
+const cleanBtn=document.getElementById("clean-btn")
 const lengthInfo=document.getElementById("length-info")
 const volumeInfo=document.getElementById("volume-info")
 const massInfo=document.getElementById("mass-info")
 
-console.log(volumeInfo)
 
+
+cleanBtn.addEventListener("dblclick",function(){
+    inputNum.value=""
+    lengthInfo.textContent=""
+    volumeInfo.textContent=""
+    massInfo.textContent=""
+})
 
 convertBtn.addEventListener("click", function(){
     lengthContainer()

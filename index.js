@@ -10,6 +10,7 @@ console.log(volumeInfo)
 convertBtn.addEventListener("click", function(){
     lengthContainer()
     volumeConvert()
+    massConvert()
 })
 
 function lengthContainer(){
@@ -26,4 +27,12 @@ function volumeConvert(){
     let litters=input*3.785
     let result=`${input} liters= ${gallons.toFixed(3)} gallons | ${input} gallons= ${litters.toFixed(3)} liters `
     volumeInfo.textContent=result
+}
+
+function massConvert(){
+    let input=inputNum.value
+    let pounds= input*2.20462
+    let kilogram=input*0.453592
+    let result=`${input} kilos= ${pounds.toFixed(3)} pounds | ${input} pounds= ${kilogram.toFixed(3)} kilos `
+    massInfo.textContent=result
 }
